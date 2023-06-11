@@ -36,7 +36,7 @@ function Input(props: propType) {
             <div className="flex flex-col items-center justify-center gap-5">
                 <div className={`flex items-center justify-between gap-3 ${visible ? "": "after:contents-none after:block after:w-full after:h-1 after:shadow-md after:shadow-purple-800 after:basis-0"}`}>
                     <input id="inputBox" type="text" className="text-xl p-3 rounded-md" placeholder="Name: " />
-                    <button type="submit" onClick={handleVisiblity} className={`rounded-full text-sm bg-gray-600 w-10 h-10 flex items-center justify-center rotate-${visible ? 0 : 180}`}> ▼ </button>
+                    <button type="submit" onClick={handleVisiblity} className={`rounded-full text-sm w-10 h-10 flex items-center justify-center ${children ? "bg-gray-600": "text-gray-500 bg-gray-800"} rotate-${visible ? 0 : 180}`}> ▼ </button>
                     <button type="submit" onClick={handlePlus} className={`${visible ? "bg-gray-600": "text-gray-500 bg-gray-800"} rounded-full text-3xl w-10 h-10 flex items-center justify-center`}> + </button>
                     <button type="submit" onClick={handleMinus} className={`${visible && children ? "bg-gray-600": "text-gray-500 bg-gray-800"} rounded-full text-3xl w-10 h-10 flex items-center justify-center`}> - </button>
                 </div>
